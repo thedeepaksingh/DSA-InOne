@@ -1,5 +1,24 @@
 (function () {
-  let __run_problem = "LC26_Fn";
+  let __run_problem = "LC27_Fn";
+
+  (function LC27_Fn() {
+    var removeElement = function (nums, val) {
+      let myarr = [];
+      for (let i = 0; i < nums.length; i++) {
+        if (nums[i] !== val) {
+          myarr.push(nums[i]);
+        }
+      }
+      // Copy elements back to nums
+      for (let i = 0; i < myarr.length; i++) {
+        nums[i] = myarr[i];
+      }
+      nums.length = myarr.length; // truncate
+      return nums.length;
+    };
+
+    if (__run_problem === "LC27_Fn") removeElement([3, 2, 2, 3], 3);
+  })();
 
   (function LC26_Fn() {
     var removeDuplicates = function (nums = []) {
@@ -11,10 +30,10 @@
           mySet.add(nums[i]);
         }
       }
-       nums.length = 0;
+      nums.length = 0;
       for (let item of mySet) {
         console.log("Set: ", item);
-        nums.push(item); 
+        nums.push(item);
       }
       let len = nums.length;
       return len;
