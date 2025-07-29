@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 (function () {
   let __run_problem = "LC27_Fn";
 
@@ -7,6 +8,49 @@
       for (let i = 0; i < nums.length; i++) {
         if (nums[i] !== val) {
           myarr.push(nums[i]);
+=======
+const result = (function LC_Easy_Master(){
+    let __run_problem = "LC1005_Fn";
+
+    return (function LC1005_Fn(){
+        var largestSumAfterKNegations = (arr,k) =>{
+            if(arr.length === 0) return num_check;
+
+            let numString = num_check.toString();
+            let left = 0;
+            let right = numString.length - 1;
+
+            // main logic here
+            while(left < right){
+                if(numString[left] !== numString[right]) return false;
+                left++;
+                right--; 
+            }
+
+            return true
+        };
+
+        let nu_arr = [4,2,3]; let k = 1
+        if(__run_problem === "LC1005_Fn") return largestSumAfterKNegations(nu_arr,k);
+    })();
+
+    return (function LC9_Fn(){
+        var isPalindrome = (num_check) =>{
+            if(num_check === 0) return num_check;
+
+            let numString = num_check.toString();
+            let left = 0;
+            let right = numString.length - 1;
+
+            // main logic here
+            while(left < right){
+                if(numString[left] !== numString[right]) return false;
+                left++;
+                right--; 
+            }
+
+            return true
+>>>>>>> 0875af3 (sync mac changes)
         }
       }
       // Copy elements back to nums
@@ -17,6 +61,7 @@
       return nums.length;
     };
 
+<<<<<<< HEAD
     if (__run_problem === "LC27_Fn") removeElement([3, 2, 2, 3], 3);
   })();
 
@@ -92,3 +137,10 @@
     if (__run_problem === "LC9_Fn") isPalindrome(121);
   })();
 })();
+=======
+        if(__run_problem === "LC9_Fn") return isPalindrome(121);
+    })();
+})()
+
+console.log(result);
+>>>>>>> 0875af3 (sync mac changes)
