@@ -1,68 +1,28 @@
-<<<<<<< HEAD
-(function () {
-  let __run_problem = "LC27_Fn";
+(function LC_Easy_Master() {
+  let __run_problem = "LC1005_Fn";
 
-  (function LC27_Fn() {
-    var removeElement = function (nums, val) {
-      let myarr = [];
-      for (let i = 0; i < nums.length; i++) {
-        if (nums[i] !== val) {
-          myarr.push(nums[i]);
-=======
-const result = (function LC_Easy_Master(){
-    let __run_problem = "LC1005_Fn";
+  (function LC1005_Fn() {
+    var largestSumAfterKNegations = (arr, k) => {
+      if (arr.length === 0) return num_check;
 
-    return (function LC1005_Fn(){
-        var largestSumAfterKNegations = (arr,k) =>{
-            if(arr.length === 0) return num_check;
+      let numString = num_check.toString();
+      let left = 0;
+      let right = numString.length - 1;
 
-            let numString = num_check.toString();
-            let left = 0;
-            let right = numString.length - 1;
-
-            // main logic here
-            while(left < right){
-                if(numString[left] !== numString[right]) return false;
-                left++;
-                right--; 
-            }
-
-            return true
-        };
-
-        let nu_arr = [4,2,3]; let k = 1
-        if(__run_problem === "LC1005_Fn") return largestSumAfterKNegations(nu_arr,k);
-    })();
-
-    return (function LC9_Fn(){
-        var isPalindrome = (num_check) =>{
-            if(num_check === 0) return num_check;
-
-            let numString = num_check.toString();
-            let left = 0;
-            let right = numString.length - 1;
-
-            // main logic here
-            while(left < right){
-                if(numString[left] !== numString[right]) return false;
-                left++;
-                right--; 
-            }
-
-            return true
->>>>>>> 0875af3 (sync mac changes)
-        }
+      // main logic here
+      while (left < right) {
+        if (numString[left] !== numString[right]) return false;
+        left++;
+        right--;
       }
-      // Copy elements back to nums
-      for (let i = 0; i < myarr.length; i++) {
-        nums[i] = myarr[i];
-      }
-      nums.length = myarr.length; // truncate
-      return nums.length;
+
+      return true;
     };
 
-<<<<<<< HEAD
-    if (__run_problem === "LC27_Fn") removeElement([3, 2, 2, 3], 3);
+    let nu_arr = [4, 2, 3];
+    let k = 1;
+    if (__run_problem === "LC1005_Fn")
+      return largestSumAfterKNegations(nu_arr, k);
   })();
 
   (function LC26_Fn() {
@@ -137,10 +97,3 @@ const result = (function LC_Easy_Master(){
     if (__run_problem === "LC9_Fn") isPalindrome(121);
   })();
 })();
-=======
-        if(__run_problem === "LC9_Fn") return isPalindrome(121);
-    })();
-})()
-
-console.log(result);
->>>>>>> 0875af3 (sync mac changes)
