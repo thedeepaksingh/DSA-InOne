@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 var strStr = function (haystack, needle) {
   let nLen = needle.length;
   let hayLen = haystack.length;
@@ -18,3 +19,14 @@ var strStr = function (haystack, needle) {
   }
   return indexAt;
 };
+=======
+var strStr = function(haystack, needle) {
+    if(haystack && needle){
+      for(let charInhaystack in haystack){
+        console.log(charInhaystack);
+      }
+    }else{
+      return -1;
+    }
+};
+>>>>>>> 578cd77d75212ba1dc7f50eb8d75c71a6cf0729f
